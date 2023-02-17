@@ -7,7 +7,7 @@ with payments as (
         status,
         amount / 100 as amount
 
-    from `dbt-tutorial`.stripe.payment
+    from {{ source('stripe', 'payment') }}
 
 )
 
