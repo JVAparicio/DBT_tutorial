@@ -9,5 +9,5 @@ select
 
 from payments
 
-group nby 1
-having total_amount < 0
+group by 1
+having not(total_amount >= 0)
